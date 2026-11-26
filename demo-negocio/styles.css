@@ -1,0 +1,197 @@
+
+/* Colores principales */
+:root {
+    --marron: #50382b;
+    --crema: #f6f0e8;
+    --cafe: #a8754f;
+    --texto: #333333;
+}
+
+/* Configuración general */
+body {
+    font-family: Arial, sans-serif;
+    color: var(--texto);
+    margin: 0;
+}
+
+/* Navegación */
+.navbar {
+    background-color: var(--marron);
+    padding: 18px 0;
+}
+
+/* Presentación principal */
+
+.hero {
+    background:
+        linear-gradient(
+            rgba(40, 25, 15, 0.65),
+            rgba(40, 25, 15, 0.65)
+        ),
+        url("img/cafeteria.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+    padding: 140px 20px;
+}
+
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Botones */
+.btn-aroma {
+    background-color: var(--crema);
+    color: var(--marron);
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.btn-aroma:hover {
+    background-color: var(--cafe);
+    color: white;
+}
+
+/* Secciones */
+.seccion {
+    padding: 80px 20px;
+}
+
+.seccion h2 {
+    color: var(--marron);
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.fondo-claro {
+    background-color: var(--crema);
+}
+
+.descripcion {
+    max-width: 700px;
+    line-height: 1.8;
+}
+
+/* Tarjetas de servicios */
+
+/* Tarjetas de servicios */
+.tarjeta {
+    background-color: #ffffff;
+    padding: 35px 25px;
+    border-radius: 15px;
+    height: 100%;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+    border-bottom: 4px solid var(--cafe);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el ratón */
+.tarjeta:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Texto de tarjetas */
+.tarjeta p {
+    color: #555555;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* Accesibilidad: reducir animaciones */
+@media (prefers-reduced-motion: reduce) {
+    .tarjeta {
+        transition: none;
+    }
+}
+
+.tarjeta h3 {
+    color: var(--marron);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+/* Pie de página */
+footer {
+    background-color: var(--marron);
+    color: white;
+    padding: 25px;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 15px;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .seccion {
+        padding: 50px 15px;
+    }
+}
+
+
+/* Sección de contacto */
+.contacto {
+    background-color: #faf7f2;
+}
+
+/* Formulario */
+.formulario-contacto {
+    background-color: white;
+    padding: 35px;
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Campos */
+.formulario-contacto .form-control {
+    padding: 12px;
+    border: 1px solid #d9cec4;
+    border-radius: 8px;
+}
+
+.formulario-contacto .form-control:focus {
+    border-color: var(--cafe);
+    box-shadow: 0 0 0 0.2rem rgba(168, 117, 79, 0.15);
+}
+
+/* Botón del formulario */
+.formulario-contacto .btn-aroma {
+    background-color: var(--marron);
+    color: white;
+    border: none;
+}
+
+.formulario-contacto .btn-aroma:hover {
+    background-color: var(--cafe);
+}
+
+/* Adaptación a móviles */
+@media (max-width: 576px) {
+    .formulario-contacto {
+        padding: 20px;
+    }
+}

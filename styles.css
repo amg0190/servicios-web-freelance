@@ -1,0 +1,252 @@
+
+/* Variables */
+:root {
+    --azul-oscuro: #172b4d;
+    --azul: #2563eb;
+    --azul-hover: #1d4ed8;
+    --fondo-claro: #f3f6fb;
+    --texto: #374151;
+}
+
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    color: var(--texto);
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navegación */
+.navbar {
+    background-color: var(--azul-oscuro);
+    padding: 18px 0;
+}
+
+/* Presentación */
+.hero {
+    background: linear-gradient(
+        135deg,
+        #172b4d,
+        #305b91
+    );
+
+    color: white;
+    padding: 110px 20px;
+}
+
+.subtitulo {
+    color: #b8d5ff;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    max-width: 850px;
+    margin: 20px auto;
+    font-weight: bold;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+}
+
+.descripcion-hero {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+/* Botones */
+.btn-principal {
+    background-color: var(--azul);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.btn-principal:hover {
+    background-color: var(--azul-hover);
+    color: white;
+}
+
+/* Secciones */
+.seccion {
+    padding: 85px 20px;
+}
+
+.titulo-seccion {
+    font-weight: bold;
+    color: var(--azul-oscuro);
+    margin-bottom: 18px;
+}
+
+.texto-intro {
+    margin-bottom: 45px;
+    color: #6b7280;
+}
+
+.fondo-claro {
+    background-color: var(--fondo-claro);
+}
+
+/* Tarjetas de servicios */
+.tarjeta-servicio {
+    background-color: #ffffff;
+    padding: 35px 28px;
+    border-radius: 14px;
+    height: 100%;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.tarjeta-servicio:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.icono-servicio {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--azul);
+    margin-bottom: 20px;
+}
+
+.tarjeta-servicio h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--azul-oscuro);
+    margin-bottom: 15px;
+}
+
+.tarjeta-servicio p {
+    line-height: 1.7;
+}
+
+/* Proyecto */
+.tarjeta-proyecto {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.09);
+}
+
+.proyecto-cabecera {
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #172b4d
+    );
+
+    color: white;
+    padding: 25px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.proyecto-contenido {
+    padding: 35px;
+}
+
+.proyecto-contenido h3 {
+    color: var(--azul-oscuro);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.proyecto-contenido p {
+    line-height: 1.7;
+}
+
+.tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.tecnologias span {
+    background-color: var(--fondo-claro);
+    color: var(--azul-oscuro);
+    padding: 7px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+}
+
+.btn-proyecto {
+    background-color: var(--azul-oscuro);
+    color: white;
+    padding: 10px 22px;
+}
+
+.btn-proyecto:hover {
+    background-color: var(--azul);
+    color: white;
+}
+
+/* Contacto */
+.contacto {
+    background-color: white;
+}
+
+.contacto p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+/* Pie de página */
+footer {
+    background-color: var(--azul-oscuro);
+    color: white;
+    padding: 28px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 15px;
+    }
+
+    .seccion {
+        padding: 55px 15px;
+    }
+
+    .proyecto-contenido {
+        padding: 25px;
+    }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .tarjeta-servicio {
+        transition: none;
+    }
+}
+
+/* Imagen del proyecto */
+.imagen-proyecto {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: top;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 576px) {
+    .imagen-proyecto {
+        height: 200px;
+    }
+}

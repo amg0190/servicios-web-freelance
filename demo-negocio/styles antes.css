@@ -1,0 +1,115 @@
+
+/* Colores principales */
+:root {
+    --marron: #50382b;
+    --crema: #f6f0e8;
+    --cafe: #a8754f;
+    --texto: #333333;
+}
+
+/* Configuración general */
+body {
+    font-family: Arial, sans-serif;
+    color: var(--texto);
+    margin: 0;
+}
+
+/* Navegación */
+.navbar {
+    background-color: var(--marron);
+    padding: 18px 0;
+}
+
+/* Presentación principal */
+.hero {
+    background: linear-gradient(
+        135deg,
+        #50382b,
+        #a8754f
+    );
+
+    color: white;
+    padding: 120px 20px;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Botones */
+.btn-aroma {
+    background-color: var(--crema);
+    color: var(--marron);
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.btn-aroma:hover {
+    background-color: var(--cafe);
+    color: white;
+}
+
+/* Secciones */
+.seccion {
+    padding: 80px 20px;
+}
+
+.seccion h2 {
+    color: var(--marron);
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.fondo-claro {
+    background-color: var(--crema);
+}
+
+.descripcion {
+    max-width: 700px;
+    line-height: 1.8;
+}
+
+/* Tarjetas de servicios */
+.tarjeta {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    height: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.tarjeta h3 {
+    color: var(--marron);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+/* Pie de página */
+footer {
+    background-color: var(--marron);
+    color: white;
+    padding: 25px;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 15px;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .seccion {
+        padding: 50px 15px;
+    }
+}
